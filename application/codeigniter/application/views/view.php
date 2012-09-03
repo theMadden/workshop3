@@ -20,12 +20,12 @@
   	<textarea id="twoot-input" name="twoot"></textarea><br>
   	<input type="submit" value="Save twoot">
   </form>
-  <?foreach($twoots as $id=>$twoot):?>
+  <?foreach($twoots as $twoot):?>
   	<div class="twoot">
   		<div class="msg"><?=$twoot['msg']?></div>
   		<?=$twoot['date']?> -
-  		<a href="/twotter/edit/<?=$id?>">Edit</a> - 
-  		<a href="/twotter/delete/<?=$id?>">Delete</a>
+  		<a href="/twotter/edit/<?=$twoot['id']?>">Edit</a> - 
+  		<a href="/twotter/delete/<?=$twoot['id']?>">Delete</a>
   	</div>
   <?endforeach;?>
 </div>

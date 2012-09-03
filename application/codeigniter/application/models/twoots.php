@@ -16,10 +16,15 @@ class Twoots {
 		return array_reverse($_SESSION['twoots']);
 	}
 
+	public function get($id){
+		return $_SESSION['twoots'][$id];
+	}
+
 	public function append_twoot($twoot_data){	
 		$date = new DateTime();
 		$twoot_data['date'] = $date->format('d/m/Y H:i:s');
-		$_SESSION['twoots'][] = $twoot_data;
+		$twoot_data['id'] = count($_SESSION['twoots']);
+		$_SESSION['twoots'][$twoot_data['id']] = $twoot_data;
 	}
 
 	public function edit_twoot($id, $twoot_data){
@@ -31,7 +36,6 @@ class Twoots {
 	public function delete_twoot($id){
 		unset($_SESSION['twoots'][$id]);
 	}
-
 	
 	public function delete_all_twoots(){
 		$_SESSION['twoots'] = array();

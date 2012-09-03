@@ -14,8 +14,8 @@
 </head>
 <body>
 <div id="frame">
-  <div class="title">Welcome to Twotter</div>
-  Get twooting!
+  <div class="title">Edit Twoot #<?=$id?></div>
+  <div><?=$twoot['msg']?></div>
 </div>
 </body>
 </html>
