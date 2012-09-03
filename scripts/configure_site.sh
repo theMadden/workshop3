@@ -4,6 +4,9 @@
 #Copy the apache config into the right directory
 cp ../apache/workshop3.com /etc/apache2/sites-enabled/
 
+#Turn on mode rewrite, this is so you can have address like "www.site.com/things"
+a2enmod rewrite
+
 #Restart apache so it will work
 /etc/init.d/apache2 restart
 
