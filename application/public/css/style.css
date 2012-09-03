@@ -1,7 +1,7 @@
 body {
 	margin: 0px;
 	font-family: sans-serif;
-	background-color: #fff;
+	background-color: #333;
 	background-image: url('/img/twotter.png');
 }
 
@@ -17,6 +17,7 @@ body {
 .title {
 	text-align: center;
 	font-size: 24px;
+	font-family:Rockwell, 'Courier New', serif;
 	padding-bottom: 10px;
 }
 
@@ -54,5 +55,5 @@ input {
 }
 
 .twoot a:hover{
-	color: #888;
+	color: #0f0f0f;
 }
